@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+body, html {
+    padding: 0;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #f1f1f1;
+    padding: 50px;
+}
+
+.table-container {
+    background-color: white;
+    border: 1px solid #ccc;
+    // width: 300px;
+    overflow: auto;
+    height: 300px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+
+td,
+th {
+    text-align: left;
+    padding: 4px;
+    background-color: white;
+}
+
+th {
+    font-size: 10pt;
+    cursor: default;
+    position: relative;
+    &:hover {
+        background-color: #dddddd; 
+    }
+}
+
+td {
+    font-size: 11pt;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// tr:nth-child(even) {
+//     background-color: #dddddd;
+// }
+
+tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.resizer {
+    /* Displayed at the right side of column */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    cursor: col-resize;
+    user-select: none;
+    z-index: 2;
+}
+
+.resizer:hover,
+.resizing {
+    border-right: 2px solid blue;
+}
